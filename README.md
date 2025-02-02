@@ -27,20 +27,20 @@ C2A delivers a comprehensive solution encompassing UI, documentation, backend de
 
 Contract analysis generated with the latest (Feb 2, 2025) deployed smart contracts on Sepolia Base Testnet. 
 
-<img src="https://github.com/user-attachments/assets/7595791d-8a5c-4f44-8b74-fb84ae71fbd1" width="300">
-<img src="https://github.com/user-attachments/assets/dcfd7638-9634-4f0e-845b-78f2b281e261" width="300">
-<img src="https://github.com/user-attachments/assets/6dd6d56a-1b61-42bd-bd1e-7efd78d415af" width="300">
+<img src="https://github.com/user-attachments/assets/7595791d-8a5c-4f44-8b74-fb84ae71fbd1" width="250">
+<img src="https://github.com/user-attachments/assets/dcfd7638-9634-4f0e-845b-78f2b281e261" width="250">
+<img src="https://github.com/user-attachments/assets/6dd6d56a-1b61-42bd-bd1e-7efd78d415af" width="250">
 
 ### Invocation
 
-<img src="https://github.com/user-attachments/assets/82a602f0-9456-45b2-9ecb-2aa266432ef0" width="300">
-<img src="https://github.com/user-attachments/assets/7628f648-1f5b-4546-bc10-9ecceafd6f21" width="300">
-<img src="https://github.com/user-attachments/assets/900a415f-2e77-45f8-9ea9-ab563f412983" width="300">
+<img src="https://github.com/user-attachments/assets/82a602f0-9456-45b2-9ecb-2aa266432ef0" width="250">
+<img src="https://github.com/user-attachments/assets/7628f648-1f5b-4546-bc10-9ecceafd6f21" width="250">
+<img src="https://github.com/user-attachments/assets/900a415f-2e77-45f8-9ea9-ab563f412983" width="250">
 
 ### Wallet Use & Autonomous Agent
 
-<img src="https://github.com/user-attachments/assets/d190945a-a7a3-434f-a46d-be4d96bd5d4b" width="600">
-<img src="https://github.com/user-attachments/assets/95a3d068-dd09-4dfb-8c61-96e3928cd6ef" width="300">
+<img src="https://github.com/user-attachments/assets/d190945a-a7a3-434f-a46d-be4d96bd5d4b" width="500">
+<img src="https://github.com/user-attachments/assets/95a3d068-dd09-4dfb-8c61-96e3928cd6ef" width="250">
 
 
 ## Acknowledgements
