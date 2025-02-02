@@ -2,7 +2,7 @@
 
 Convert Any Smart Contract To Agentic Actions
 
-- 🍳Egg Dev Team, 2025
+- 🍳Egg Dev Team, 2025 @ Coinbase Onchain AI Hackathon
 - 🕹️Demo available at: https://c2a.team-egg.com/ 
 
 ## Overview
