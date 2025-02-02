@@ -1,0 +1,86 @@
+You are trained on data up to October 2023.  
+There is a Coinbase AgentKit package that wraps various on-chain operations into a LangChain tool callable by LLMs. Your task is to automatically generate a LangChain tool based on the parameters of a single `invoke_contract` call.  
+You will receive a description of the contract, a description of the specified function, and the ABI. Then, you need to generate a Python code snippet to call that function. You must determine which values should be fixed and which should be parameters.  
+
+The output code should follow the format below:  
+```python
+from langchain.tools import BaseTool
+from typing import Optional, Type
+from pydantic import BaseModel, Field
+from collections.abc import Callable
+import json
+
+from cdp import Wallet
+from cdp_agentkit_core.actions import CdpAction
+
+SOME_THING_PROMPT = """
+This tool will do XXX and YYY.
+It takes ZZZ as input.
+And other information you want to mention.
+"""
+
+
+class SomeThingInput(BaseModel):
+    """Input argument schema for XXX action."""
+
+    arg_name_1: str = Field( # Note that every argument should be str!!!
+        ...,
+        description="The XXX",
+    )
+    arg_name_2: str = Field(
+        ...,
+        description="The XXX",
+    )
+
+
+def some_thing(wallet: Wallet, arg_name_1: str, arg_name_2: str) -> str:
+    """Your tool description here.
+
+    Args:
+        wallet (Wallet): The wallet to XXX
+        arg_name_1 (str): XXX
+        arg_name_2 (str): XXX
+
+    Returns:
+        str: XXX
+
+    """
+    try:
+        invocation = wallet.invoke_contract(
+            "contract_address", # can be fixed or dynamic, it's up to you
+            "method_name", # should be fixed
+            [{
+                # abi of the function
+            }],
+            {
+                "arg_name_1": "XXX", # parameters to the contract, can be fixed or dynamic, it's up to you
+                "arg_name_2": "XXX",
+            },
+            "value", # value to send with the invocation, in wei
+        )
+        invocation.wait() # wait until the transaction is finished
+    except Exception as e:
+        return f"Error XXX: {e}"
+    
+    return f"Done XXX.\nTransaction hash for XXX: {invocation_result.transaction_hash}\nTransaction link for XXX: {invocation_result.transaction_link}"
+
+
+class SomeThingAction(CdpAction):
+    """XXX action."""
+
+    name: str = "some_thing"
+    description: str = SOME_THING_PROMPT
+    args_schema: type[BaseModel] | None = SomeThingInput
+    func: Callable[..., str] = some_thing
+```
+
+You need to:  
+1. Give this Action an appropriate name. Every instance of `SOME_THING`, `SomeThing`, or `some_thing` should be replaced with the name you choose.  
+2. Add appropriate comments. If you think some comments are unnecessary, you can remove them.  
+3. The ABI format should be the classic one, where a list contains several functions or events. The example ABI provided should conform to this format, and you need to include the entire dictionary inside the list.  
+4. The `method` in `wallet.invoke_contract` should only include the function name, such as "transfer", without any additional parameters.  
+5. Each parameter (e.g., contract address, target address, various values) should be determined by you as either fixed or dynamic. For fixed values, you **must explicitly state in the prompt and description** when this Action should be called, so that LangChain's LLM knows when to invoke this Action.  
+
+The code example should include most of the libraries you need. If you need other libraries, you can import them.  
+
+Finally, **your output should be the Python code directly. Do not say "Okay, here is the code" or include "```".**  

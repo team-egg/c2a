@@ -1,0 +1,10 @@
+I'm on base sepolia test chain, what can i do with this contract 0x71EF937E2e84E1bE1181C3D2BF03AD86C36D3Fa1?
+I'm on base chain, what can i do with this contract 0x9e592de9Cd749005468Ae505395E1749524fBAFa?
+
+I'm on base sepolia test chain, what can i do with this contract 0x71EF937E2e84E1bE1181C3D2BF03AD86C36D3Fa1? Answer my question based on my balances.
+
+能跑通的一个example（依次输入这几句）：
+I'm on base sepolia test chain, what specifically can i do with this contract 0x19B57F2Ee33bcFDE75c1496B3752D099fc408Ef1?
+How much of my token can 0xb6cE7b211D80442b0E5A689fCe34892FF46829c1 spend? I mean, that address spends my token. You can retrieve my wallet address by tools.
+It's incorrect. You can call decimals() function. Convert that to human readable amount.
+Now approve 1e-6 this token to 0xb6cE7b211D80442b0E5A689fCe34892FF46829c1. It's approve, not transfer!!

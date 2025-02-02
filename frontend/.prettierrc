@@ -1,0 +1,35 @@
+{
+  "tabWidth": 2,
+  "singleQuote": true,
+  "printWidth": 120,
+  "proseWrap": "never",
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "typescript"
+      }
+    },
+     {
+      "files": "*.tsx",
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "const.ts",
+      "options": {
+        "printWidth": 160
+      }
+    }
+  ],
+  "importOrder": ["^(react|react-dom)$", "^([a-z]|@[a-z])", "", ".*"],
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"]
+}

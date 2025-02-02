@@ -1,0 +1,6 @@
+__pycache__
+analysis
+cache
+crytic-export
+wallet_data.txt
+.env

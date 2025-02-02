@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="90" fill="#2d1b4e"></circle>
+  
+  <!-- Code Pattern Background -->
+  <path d="M40 70 L60 70 L65 80 L55 90 L40 90 Z" fill="#ff6b6b" opacity="0.2"></path>
+  <path d="M140 120 L160 120 L165 130 L155 140 L140 140 Z" fill="#ff6b6b" opacity="0.2"></path>
+  
+  <!-- Developer Symbol (Brackets) -->
+  <path d="M70 80 L60 100 L70 120" fill="none" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M130 80 L140 100 L130 120" fill="none" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round"></path>
+  
+  <!-- Ethereum Symbol Stylized -->
+  <path d="M100 60 L120 90 L100 100 L80 90 Z" fill="#6c5ce7" opacity="0.8"></path>
+  <path d="M100 100 L120 90 L100 120 L80 90 Z" fill="#6c5ce7" opacity="0.5"></path>
+  
+  <!-- Connected Nodes (Web3) -->
+  <circle cx="70" cy="140" r="4" fill="#a8e6cf"></circle>
+  <circle cx="130" cy="140" r="4" fill="#a8e6cf"></circle>
+  <path d="M70 140 Q100 160 130 140" fill="none" stroke="#a8e6cf" stroke-width="2"></path>
+  
+  <!-- Dynamic Elements -->
+  <g transform="translate(100 100)">
+    <circle r="30" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="20 10">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"></animateTransform>
+    </circle>
+  </g>
+  
+  <!-- Tech Connection Lines -->
+  <path d="M60 60 L80 80" stroke="#a8e6cf" stroke-width="1" opacity="0.5"></path>
+  <path d="M120 80 L140 60" stroke="#a8e6cf" stroke-width="1" opacity="0.5"></path>
+  
+  <!-- Interactive Dots -->
+  <circle cx="60" cy="60" r="3" fill="#ff6b6b">
+    <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"></animate>
+  </circle>
+  <circle cx="140" cy="60" r="3" fill="#ff6b6b">
+    <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite" begin="0.5s"></animate>
+  </circle>
+</svg>

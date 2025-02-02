@@ -1,0 +1,6 @@
+@import url('reset.css');
+
+code {
+  white-space: pre-wrap; /* 保留空格和换行 */
+  word-wrap: break-word; /* 允许长行换行 */
+}
